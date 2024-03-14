@@ -1,0 +1,1 @@
+export const MOVIES_IMGS_URL = 'https://image.tmdb.org/t/p/original'

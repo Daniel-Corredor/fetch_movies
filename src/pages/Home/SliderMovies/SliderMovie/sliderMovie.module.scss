@@ -1,0 +1,26 @@
+.sliderMovies{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+}
+.movie_info{
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 4rem;
+    width: 50%;
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #a7a7a7cf;
+        margin:0 auto;
+        padding: 1rem;
+    }
+}

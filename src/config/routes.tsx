@@ -14,7 +14,7 @@ const routes = [
   { path: "/new-movies",label:'Latest releases', element: <NewMovies /> },
   { path: "/popular",  label: 'Popular',element: <Popular /> },
   { path: "/search",  label: 'Search', element: <Search /> },
-  { path: "/movie",  label: 'Movie', element: <Movie /> },
+  { path: "/movie/:movieId",  label: 'Movie', element: <Movie /> },
   { path: "*", label:'error', element: <Error404 /> },
 ];
 export type routeType = typeof routes[0]

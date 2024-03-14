@@ -5,4 +5,26 @@
 .header{
     display: flex;
     align-items: center;
+
+}
+.ant-list-header{
+    background-color:#001529 !important; 
+        border-start-end-radius: 0.25rem;
+        border-top-left-radius: 0.25rem;
+  
+    h2{
+        text-align: center;
+        margin:0;
+        color: white
+    }
+}
+.ant-list-items{
+    height: 500px;
+    overflow-y: scroll;
+}
+.ant-list-item-meta{
+    align-items: center !important;
+}
+.ant-list-items-title{
+    margin:0
 }
