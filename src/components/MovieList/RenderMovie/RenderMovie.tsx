@@ -1,11 +1,11 @@
 import { RightOutlined } from "@ant-design/icons"
 import { Avatar, Button, List } from "antd"
 import { MOVIES_IMGS_URL } from "config/moviesBaseLink"
-import { MovieInfo } from "interfaces/movies.interface"
+import {  Result } from "interfaces/movies.interface"
 import { Link } from "react-router-dom"
 
 interface RenderMovieProps{
-    movie: MovieInfo
+    movie: Result
 }
 const RenderMovie = ({movie:{id, title,poster_path}}:RenderMovieProps) => {
     const posterPath= `${MOVIES_IMGS_URL}${poster_path}`

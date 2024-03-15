@@ -7,20 +7,23 @@ import Footer from "components/Footer/Footer";
 const Home = () => {
    const useMovies = useGetMovies();
   const  movies= useMovies('now_playing');
+  
+  const moviesResult = movies.movies?.results 
   const popularMovies = useMovies('popular');
   const topMovies = useMovies('top_rated')
-  console.log(movies);
+  const popularResults = popularMovies.movies?.results
+  const TopRatedResult = topMovies.movies?.results
   
   return (
     <div>
      
-      <SliderMovies Movies={movies.result} loading={movies.loading}/>
+      <SliderMovies movies={moviesResult!} loading={movies.loading}/>
       <Row>
         <Col span={12}>
-          <MovieList title='Popular movies' movies={popularMovies.result} loading={popularMovies.loading}/>
+          <MovieList title='Popular movies' movies={popularResults!} loading={popularMovies.loading}/>
         </Col>
         <Col span={12}>
-        <MovieList title='Top rated' movies={topMovies.result} loading={popularMovies.loading}/>
+        <MovieList title='Top rated' movies={TopRatedResult!} loading={popularMovies.loading}/>
 
         </Col>
       </Row>

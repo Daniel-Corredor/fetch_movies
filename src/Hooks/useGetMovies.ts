@@ -1,12 +1,14 @@
 import api from "config/axios"
-import { MovieInfo } from "interfaces/movies.interface";
+import { Movie } from "interfaces/movie.interface";
+import { Movies } from "interfaces/movies.interface";
 import { useEffect, useState } from "react"
 
 
 
  export const  useGetMovies=()=> {
   return function(url:string){
-    const [result, setMovies] = useState<MovieInfo[]>([]);
+    const [movies, setMovies] = useState<Movies >();
+    const [movie, setMovie] = useState<Movie>()
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
   
@@ -18,7 +20,17 @@ import { useEffect, useState } from "react"
      
       
         .then(response => {
-          setMovies(response.data.results);
+          
+          if (response.data.results) {
+            
+            
+            setMovies(response.data);
+          }
+          else{
+            console.log('single movie',response.data);
+            setMovie(response.data)
+          }
+
         })
         .catch(error => {
           console.error('Error fetching now playing movies:', error);
@@ -28,6 +40,6 @@ import { useEffect, useState } from "react"
           setLoading(false);
         });
     }, []);
-  
-    return {  result, loading, error };}
+    
+    return {  movies,movie, loading, error };}
   }

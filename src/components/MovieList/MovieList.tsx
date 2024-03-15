@@ -1,12 +1,12 @@
 import { List } from "antd";
-import { MovieInfo } from "interfaces/movies.interface";
+import {  Result } from "interfaces/movies.interface";
 import styles from './movie.module.scss'
 import RenderMovie from "./RenderMovie/RenderMovie";
 import Loading from "components/Loading/Loading";
 import './movie.module.scss'
 interface MovieListProps{
     title:string;
-    movies: MovieInfo[],
+    movies: Result[],
     loading: boolean
 }
 const MovieList = ({title,movies,loading}:MovieListProps) => {

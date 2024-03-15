@@ -1,0 +1,53 @@
+.movie{
+    height: calc(100vh - 4rem);
+    
+
+}
+.row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.poster{
+
+    height: 70%;
+
+    div{
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+.info{
+    height: 70%;
+    color: white;
+    .header{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1{
+            font-size: 4rem;
+           
+            margin:0;
+            span{
+                font-size: 1.25rem;
+                margin-left: 0.5rem;
+                opacity: 0.5
+            }
+        };
+    
+    }
+    .info_content{
+        margin-top:50px;
+       h3 {
+       
+        font-weight: 700;
+        font-size: 1.5rem;
+       };
+       p,li {
+        margin:1rem 0;
+       }
+    }
+}

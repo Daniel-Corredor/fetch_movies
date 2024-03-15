@@ -1,16 +1,19 @@
-import { MovieInfo } from 'interfaces/movies.interface'
+import {  Result } from 'interfaces/movies.interface'
 import SliderMovie from './SliderMovie/SliderMovie'
 import { Carousel } from 'antd'
 import Loading from 'components/Loading/Loading'
-const SliderMovies = ({Movies, loading}:{Movies:MovieInfo[], loading:boolean}) => {
-    console.log("on component",Movies)
+const SliderMovies = ({movies, loading}:{movies:Result[], loading:boolean}) => {
   return (
     <>
     {loading? <Loading/>:
         <Carousel autoplay={false}> 
-        {Movies.map((movie)=><SliderMovie movie={movie} key={movie.id}>
+        {movies.map((movie)=>
+        
+        <SliderMovie movie={movie} key={movie.id}>
     
-        </SliderMovie>)}</Carousel>}
+        </SliderMovie>)}
+        
+        </Carousel>}
 
     </>
   )

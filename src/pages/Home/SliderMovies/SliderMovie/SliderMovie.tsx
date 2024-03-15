@@ -1,8 +1,8 @@
-import { MovieInfo } from 'interfaces/movies.interface'
+import {  Result } from 'interfaces/movies.interface'
 import styles from './sliderMovie.module.scss'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
-const SliderMovie = ({movie:{id,backdrop_path, title,overview}}:{movie:MovieInfo}) => {
+const SliderMovie = ({movie:{id,backdrop_path, title,overview}}:{movie:Result}) => {
   const imgUrl = `https://image.tmdb.org/t/p/original/${backdrop_path}`
   return (
     <div 
